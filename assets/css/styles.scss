@@ -98,8 +98,7 @@ ul {
 
 /* Header */
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("../images/lisboa-6.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/lisboa-6.jpg");
   background-position: center;
   background-size: cover;
   height: 85vh;
@@ -107,6 +106,7 @@ ul {
   justify-content: space-around;
   align-items: center;
   color: var(--text-color);
+  margin-bottom: 2em;
 }
 
 #disclaimer h2,
@@ -134,6 +134,101 @@ ul {
 
 #disclaimer .event-date {
   font-weight: bold;
+}
+
+/* Slide */
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px; 
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img {
+  width: 800px;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+.navigation-auto div {
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #fff;
 }
 
 /* highlights section */
@@ -185,7 +280,7 @@ ul {
 }
 
 #highlight-1 {
-  background-image: url("../images/lisboa-5.jpg");
+  background-image: url("../images/lisboa-3.jpg");
 }
 
 #highlight-2 {
@@ -225,8 +320,9 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // max-width: 20%;
+  padding: 2em;
 }
+
 #maps iframe {
   top: 0;
   left: 0;
@@ -405,6 +501,11 @@ footer {
     margin-bottom: 0.5em;
   }
 
+  /* slide */
+  .slider {
+    display: none;
+  }
+
   /* highlights section */
   .highlights {
     flex-direction: column;
@@ -418,6 +519,7 @@ footer {
     margin-bottom: 2em;
   }
 
+  /* contacts */
   .contacts {
     flex-direction: column;
     align-items: center;
