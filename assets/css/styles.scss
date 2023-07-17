@@ -1,0 +1,432 @@
+:root {
+  --primary: #00baf2;
+  --secondary: #95989a;
+  --text-color: #fff;
+  --text-secondary: #000;
+  --text-tertiary: #5d5d5d;
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Navbar starts */
+.title {
+  color: var(--primary);
+}
+
+.subtitle {
+  color: var(--secondary);
+}
+
+nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 3px 2px #f1f1f1;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  font-weight: var(--bold-font);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  background-color: #020202;
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 6px auto;
+}
+/* Navbar ends */
+
+/* Header */
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/lisboa-6.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text-color);
+}
+
+#disclaimer h2,
+#disclaimer .event-date {
+  color: var(--primary);
+}
+
+#disclaimer h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+#disclaimer .about-event {
+  font-size: 2em;
+  text-transform: uppercase;
+  max-width: 350px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#disclaimer p {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+#disclaimer .event-date {
+  font-weight: bold;
+}
+
+/* highlights section */
+#highlights h2 {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 2em;
+  font-weight: 500;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  padding: 4em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.highlight {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20%;
+  color: var(--text-tertiary);
+
+  pointer-events: auto;
+  transform: scale(1);
+  transition: all 0.4s;
+}
+
+.highlight:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.highlights:hover .highlight:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.highlight .highlight-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1em;
+}
+
+#highlight-1 {
+  background-image: url("../images/lisboa-5.jpg");
+}
+
+#highlight-2 {
+  background-image: url("../images/lisboa-8.jpg");
+}
+
+#highlight-3 {
+  background-image: url("../images/lisboa-10.jpg");
+}
+
+/* contact */
+#contacts {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/lisboa-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--text-color);
+//   margin-bottom: 3em;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  padding: 4em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#maps {
+  overflow: hidden;
+  // height: 100%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // max-width: 20%;
+}
+#maps iframe {
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+#subscription-form {
+  max-width: 70%;
+  margin-bottom: 2em;
+  background-color: var(--secondary);
+  padding: 2em;
+}
+
+#subscription-form p {
+  font-size: 1.5em;
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.form-group label {
+  color: var(--text-tertiary);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--text-color);
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* Event details container */
+#details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+.detail img {
+  width: 50%;
+}
+
+.detail h3 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+#detail-1 h3 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.detail-description {
+  width: 100%;
+  padding-left: 2em;
+}
+
+#detail-3 .detail-description {
+  justify-self: flex-start;
+}
+
+.detail-description ul {
+  list-style-position: inside;
+}
+
+.detail-description ul li {
+  margin-bottom: 0.4em;
+}
+
+.detail-description ul li:last-child {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary);
+//   border-top: 1px solid #f1f1f1;
+  box-shadow: 0px -2px 3px #f1f1f1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul {
+    background-color: #fff;
+    flex-direction: column;
+    position: fixed;
+    left: 100%;
+    top: 5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2rem 0;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* Event form */
+  #home {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #disclaimer {
+    padding: 2em;
+  }
+
+  #disclaimer h2 {
+    margin-bottom: 0.5em;
+  }
+
+  /* highlights section */
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 2em;
+  }
+
+  .highlight {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 2em;
+  }
+
+  .contact {
+    max-width: 80%;
+    margin-bottom: 2em;
+  }
+}
